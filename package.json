@@ -1,0 +1,39 @@
+{
+  "name": "track-workout-api",
+  "version": "0.1.0",
+  "description": "Sync server for Track Workout",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "NODE_ENV=production node dist/index.js",
+    "check": "tsc --noEmit",
+    "test": "DB_DIALECT=sqlite DATABASE_URL=:memory: API_KEY=test-key vitest run",
+    "test:watch": "DB_DIALECT=sqlite DATABASE_URL=:memory: API_KEY=test-key vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push:sqlite": "DB_DIALECT=sqlite drizzle-kit push"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "express": "^4.21.2",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "better-sqlite3": "^11.7.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.0",
+    "@types/supertest": "^6.0.2",
+    "drizzle-kit": "^0.30.1",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
