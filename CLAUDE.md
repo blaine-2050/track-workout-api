@@ -33,10 +33,18 @@ Node ≥20, TypeScript, Express, Drizzle ORM, MySQL (Railway shared instance, `t
 - Healthcheck: `GET /health` (Railway calls every 60s).
 - Database: shared Railway MySQL, table prefix `tw_`.
 
-## Related repos
-- https://github.com/blaine-2050/track-workout-core — prose specs (PRD, DATA_MODEL, COMPUTER_USE_PROTOCOL, etc.)
-- https://github.com/blaine-2050/track-workout-swift — iOS client
-- (future) `-android-react`, `-ios-web`, `-macos-swift`
+## Delegates to
+
+| What | Where | How |
+|------|-------|-----|
+| **Data model + sync contract** | [track-workout-core](https://github.com/blaine-2050/track-workout-core) | `DATA_MODEL.md` defines the wire format and entity schema. `DECISIONS.md` records auth + conflict policies. |
+
+### Delegated by (clients that push to this server)
+
+| Repo | Tool | Platforms |
+|------|------|-----------|
+| [track-workout-swift](https://github.com/blaine-2050/track-workout-swift) | SwiftUI + Core Data | iOS, macOS |
+| [track-workout-expo](https://github.com/blaine-2050/track-workout-expo) | Expo + React Native | iOS, Android |
 
 ## Where things go
 - `src/server.ts` — `createServer()` factory (testable, no listen).
