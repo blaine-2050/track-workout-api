@@ -4,7 +4,7 @@
 A small JSON API that accepts the iOS client's existing `POST /sync/events` payload, persists workout events to MySQL on Railway, and is reachable from a real iPhone in a real gym.
 
 **Source-of-truth specs:**
-- Wire format: defined by [`track-workout-ios-swift/TrackWorkout/.../WorkoutViewModel.swift`](https://github.com/blaine-2050/track-workout-ios-swift/blob/main/TrackWorkout/TrackWorkout/ViewModels/WorkoutViewModel.swift) (`SyncEventPayload`, `SyncResponsePayload`).
+- Wire format: defined by [`track-workout-swift/TrackWorkout/.../WorkoutViewModel.swift`](https://github.com/blaine-2050/track-workout-swift/blob/main/TrackWorkout/TrackWorkout/ViewModels/WorkoutViewModel.swift) (`SyncEventPayload`, `SyncResponsePayload`).
 - Data model: [`track-workout-core/DATA_MODEL.md`](https://github.com/blaine-2050/track-workout-core/blob/main/DATA_MODEL.md).
 - Sync semantics: idempotent insert/update by id; latest-`updatedAt` wins; conflicts logged.
 

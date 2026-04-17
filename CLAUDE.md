@@ -35,7 +35,7 @@ Node ≥20, TypeScript, Express, Drizzle ORM, MySQL (Railway shared instance, `t
 
 ## Related repos
 - https://github.com/blaine-2050/track-workout-core — prose specs (PRD, DATA_MODEL, COMPUTER_USE_PROTOCOL, etc.)
-- https://github.com/blaine-2050/track-workout-ios-swift — iOS client
+- https://github.com/blaine-2050/track-workout-swift — iOS client
 - (future) `-android-react`, `-ios-web`, `-macos-swift`
 
 ## Where things go
